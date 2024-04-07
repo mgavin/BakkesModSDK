@@ -12,5 +12,5 @@ public:
 		int ranked;
 	};
 
-	_NODISCARD static std::vector<StatValue> GetStatValues();
+	[[nodiscard]] static std::vector<StatValue> GetStatValues();
 };

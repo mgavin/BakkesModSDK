@@ -7,11 +7,11 @@ public:
 	CONSTRUCTORS(MapListWrapper)
 
 	//BEGIN SELF IMPLEMENTED
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 	//END SELF IMPLEMENTED
 
-	_NODISCARD ArrayWrapper<MapDataWrapper> GetSortedMaps() const;
+	[[nodiscard]] ArrayWrapper<MapDataWrapper> GetSortedMaps() const;
 
 private:
 	PIMPL

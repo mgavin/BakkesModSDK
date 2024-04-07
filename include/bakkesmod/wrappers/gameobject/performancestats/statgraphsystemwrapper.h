@@ -12,7 +12,7 @@ class BAKKESMOD_PLUGIN_IMPORT StatGraphSystemWrapper : public ObjectWrapper {
 public:
 	CONSTRUCTORS(StatGraphSystemWrapper)
 
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 
 	//AUTO-GENERATED FROM FIELDS

@@ -138,7 +138,7 @@ class BAKKESMOD_PLUGIN_IMPORT MatchmakingWrapper : public ObjectWrapper
 public:
 	CONSTRUCTORS(MatchmakingWrapper)
 
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 
 	//Matchmaking queue stuff
@@ -176,8 +176,8 @@ public:
 	bool HasSeasonEnded();
 	int GetTotalPopulation();
 
-	_NODISCARD int GetTotalPlayersOnline() const;
-	_NODISCARD int GetPlayerCount(PlaylistIds playlist) const;
+	[[nodiscard]] int GetTotalPlayersOnline() const;
+	[[nodiscard]] int GetPlayerCount(PlaylistIds playlist) const;
 
 
 	//misc

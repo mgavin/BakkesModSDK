@@ -17,10 +17,10 @@ struct BodyAssetIdsCheckResult
 class BAKKESMOD_PLUGIN_IMPORT DecalUtilities
 {
 public:
-	_NODISCARD static tl::expected<ApplyDecalToCarResult, std::string> ApplyDecalToCar(const CarWrapper& car_wrapper,
+	[[nodiscard]] static tl::expected<ApplyDecalToCarResult, std::string> ApplyDecalToCar(const CarWrapper& car_wrapper,
 	                                                                                   const pluginsdk::BodyShaderOverride& custom_body_decal);
-	_NODISCARD static tl::expected<BodyAssetIdsCheckResult, std::string> GetBodyAssetIds(const CarWrapper& car_wrapper);
+	[[nodiscard]] static tl::expected<BodyAssetIdsCheckResult, std::string> GetBodyAssetIds(const CarWrapper& car_wrapper);
 
-	_NODISCARD static tl::expected<bool, std::string> ApplyDecalToBall(const BallWrapper& ball_wrapper, const pluginsdk::ShaderOverride& shader_override);
+	[[nodiscard]] static tl::expected<bool, std::string> ApplyDecalToBall(const BallWrapper& ball_wrapper, const pluginsdk::ShaderOverride& shader_override);
 
 };

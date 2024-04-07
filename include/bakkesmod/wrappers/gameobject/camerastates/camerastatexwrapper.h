@@ -9,10 +9,10 @@ public:
 	CONSTRUCTORS(CameraStateXWrapper)
 
 	//BEGIN SELF IMPLEMENTED
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 
-	_NODISCARD std::string GetStateType() const;
+	[[nodiscard]] std::string GetStateType() const;
 	//END SELF IMPLEMENTED
 
 private:

@@ -13,10 +13,10 @@ class BAKKESMOD_PLUGIN_IMPORT MenuStackWrapper : public ObjectWrapper
 	public:
     CONSTRUCTORS(MenuStackWrapper)
 
-    _NODISCARD std::string GetTopMenu() const;
-    _NODISCARD std::vector<std::string> GetMenuStack() const;
-    _NODISCARD bool IsNull() const;
-	_NODISCARD explicit operator bool() const;
+    [[nodiscard]] std::string GetTopMenu() const;
+    [[nodiscard]] std::vector<std::string> GetMenuStack() const;
+    [[nodiscard]] bool IsNull() const;
+	[[nodiscard]] explicit operator bool() const;
 
 
 private:

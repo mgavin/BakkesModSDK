@@ -78,11 +78,11 @@ public:
 	GuiManagerWrapper				GetGUIManager();
 	PlayerControllerWrapper			GetPlayerController();
 	ItemsWrapper					GetItemsWrapper();
-	_NODISCARD LoadoutSaveWrapper	GetUserLoadoutSave() const;
+	[[nodiscard]] LoadoutSaveWrapper	GetUserLoadoutSave() const;
 	MatchmakingWrapper				GetMatchmakingWrapper();
 	SettingsWrapper					GetSettings();
-	_NODISCARD ReplayManagerWrapper GetReplayManagerWrapper() const;
-	_NODISCARD MapListWrapper		GetMapListWrapper() const;
+	[[nodiscard]] ReplayManagerWrapper GetReplayManagerWrapper() const;
+	[[nodiscard]] MapListWrapper		GetMapListWrapper() const;
 
 	ModalWrapper					CreateModal(const std::string& title);
 	TextInputModalWrapper			CreateTextInputModal(const std::string& title);
@@ -130,8 +130,8 @@ public:
 	UnrealStringWrapper				GetPlayerName();
 	ClubDetailsWrapper				GetLocalClub();
 	SequenceWrapper					GetMainSequence();
-	_NODISCARD GfxDataTrainingWrapper		GetGfxTrainingData() const;
-	_NODISCARD MenuStackWrapper				GetMenuStack() const;
+	[[nodiscard]] GfxDataTrainingWrapper		GetGfxTrainingData() const;
+	[[nodiscard]] MenuStackWrapper				GetMenuStack() const;
 	
 	[[deprecated("Experimental feature, use at your own risk. implementation and function signature subject to change")]]
 	void							SetBotLoadout(PriWrapper& bot_pri, const struct BotLoadoutData& loadout_data);

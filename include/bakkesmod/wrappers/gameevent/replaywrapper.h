@@ -14,7 +14,7 @@ class BAKKESMOD_PLUGIN_IMPORT ReplayWrapper : public ObjectWrapper {
 public:
 	CONSTRUCTORS(ReplayWrapper)
 
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 
 	//AUTO-GENERATED FROM FIELDS
@@ -48,7 +48,7 @@ public:
 	void SetMaxReplaySizeMB(int newMaxReplaySizeMB);
 	[[deprecated("Removed from Rocket League, returns the same as GetId")]]
 	UnrealStringWrapper GetFilename();
-	_NODISCARD UnrealStringWrapper GetFilePath() const;
+	[[nodiscard]] UnrealStringWrapper GetFilePath() const;
 	UnrealStringWrapper GetId();
 	UnrealStringWrapper GetDate();
 	std::string GetMapName() const;

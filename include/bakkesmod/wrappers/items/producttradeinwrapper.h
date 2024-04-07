@@ -9,7 +9,7 @@ public:
 	CONSTRUCTORS(ProductTradeInWrapper)
 
 	ArrayWrapper<OnlineProductWrapper> GetProducts() const;
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 
 private:

@@ -8,7 +8,7 @@ class BAKKESMOD_PLUGIN_IMPORT PrimitiveComponentWrapper : public ObjectWrapper {
 public:
 	CONSTRUCTORS(PrimitiveComponentWrapper)
 
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 
 	//AUTO-GENERATED FROM FIELDS

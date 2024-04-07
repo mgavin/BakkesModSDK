@@ -7,10 +7,10 @@ public:
 	CONSTRUCTORS(CarMeshComponentBaseWrapper)
 
 	//BEGIN SELF IMPLEMENTED
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 
-	_NODISCARD CarWrapper GetCar() const;
+	[[nodiscard]] CarWrapper GetCar() const;
 
 	//END SELF IMPLEMENTED
 

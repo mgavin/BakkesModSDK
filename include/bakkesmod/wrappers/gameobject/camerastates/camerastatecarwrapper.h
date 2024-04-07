@@ -7,19 +7,19 @@ public:
 	CONSTRUCTORS(CameraStateCarWrapper)
 
 	//BEGIN SELF IMPLEMENTED
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 
 	static const CameraStateCarWrapper GetInstanceWithDefaultValues();
 	//END SELF IMPLEMENTED
 
-	_NODISCARD float GetInterpToGroundRate() const;
-	_NODISCARD float GetInterpToAirRate() const;
-	_NODISCARD float GetGroundRotationInterpRate() const;
-	_NODISCARD float GetGroundRotationInterpRateWall() const;
-	_NODISCARD float GetFOVInterpSpeed() const;
-	_NODISCARD float GetSupersonicFOVInterpSpeed() const;
-	_NODISCARD float GetGroundNormalInterpRate() const;
+	[[nodiscard]] float GetInterpToGroundRate() const;
+	[[nodiscard]] float GetInterpToAirRate() const;
+	[[nodiscard]] float GetGroundRotationInterpRate() const;
+	[[nodiscard]] float GetGroundRotationInterpRateWall() const;
+	[[nodiscard]] float GetFOVInterpSpeed() const;
+	[[nodiscard]] float GetSupersonicFOVInterpSpeed() const;
+	[[nodiscard]] float GetGroundNormalInterpRate() const;
 
 	void SetInterpToGroundRate(float value);
 	void SetInterpToAirRate(float value);

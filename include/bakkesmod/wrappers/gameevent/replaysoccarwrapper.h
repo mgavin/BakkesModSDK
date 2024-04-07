@@ -9,9 +9,9 @@ class BAKKESMOD_PLUGIN_IMPORT ReplaySoccarWrapper : public ReplayWrapper
 public:
 	CONSTRUCTORS(ReplaySoccarWrapper)
 
-	_NODISCARD std::vector<ScoredGoal> GetGoals() const;
-	_NODISCARD std::vector<Highlight> GetHighlights() const;
-	_NODISCARD std::vector<ReplayPlayerStats> GetPlayerStats() const;
+	[[nodiscard]] std::vector<ScoredGoal> GetGoals() const;
+	[[nodiscard]] std::vector<Highlight> GetHighlights() const;
+	[[nodiscard]] std::vector<ReplayPlayerStats> GetPlayerStats() const;
 
 
 	//AUTO-GENERATED FROM FIELDS

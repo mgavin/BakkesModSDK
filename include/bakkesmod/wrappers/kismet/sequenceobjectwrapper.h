@@ -8,7 +8,7 @@ class BAKKESMOD_PLUGIN_IMPORT SequenceObjectWrapper : public ObjectWrapper {
 public:
 	CONSTRUCTORS(SequenceObjectWrapper)
 
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 
 	SequenceWrapper     GetParentSequence();

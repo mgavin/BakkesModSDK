@@ -12,10 +12,10 @@ public:
 	void static ForceSetLoadout(const PriWrapper& pri_wrapper, const pluginsdk::Loadout& loadout);
 
 	// can be called any time
-	_NODISCARD static pluginsdk::CarColors GetPaintFinishColors(const CarWrapper& car_wrapper);
-	_NODISCARD static std::optional<pluginsdk::Loadout> GetLoadoutFromPri(const PriWrapper& pri_wrapper, int team_index);
-	_NODISCARD static std::vector<pluginsdk::PaintFinishColor> GetBlueColorSet();
-	_NODISCARD static std::vector<pluginsdk::PaintFinishColor> GetOrangeColorSet();
-	_NODISCARD static std::vector<pluginsdk::PaintFinishColor> GetCustomColorSet();
+	[[nodiscard]] static pluginsdk::CarColors GetPaintFinishColors(const CarWrapper& car_wrapper);
+	[[nodiscard]] static std::optional<pluginsdk::Loadout> GetLoadoutFromPri(const PriWrapper& pri_wrapper, int team_index);
+	[[nodiscard]] static std::vector<pluginsdk::PaintFinishColor> GetBlueColorSet();
+	[[nodiscard]] static std::vector<pluginsdk::PaintFinishColor> GetOrangeColorSet();
+	[[nodiscard]] static std::vector<pluginsdk::PaintFinishColor> GetCustomColorSet();
 
 };

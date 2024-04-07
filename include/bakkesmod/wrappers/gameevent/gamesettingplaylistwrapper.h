@@ -9,7 +9,7 @@ class BAKKESMOD_PLUGIN_IMPORT GameSettingPlaylistWrapper : public ObjectWrapper 
 public:
 	CONSTRUCTORS(GameSettingPlaylistWrapper)
 
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 
 	std::string GetLocalizedName();

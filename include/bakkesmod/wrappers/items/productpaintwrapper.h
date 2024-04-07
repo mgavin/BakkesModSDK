@@ -6,19 +6,19 @@ public:
 	CONSTRUCTORS(ProductPaintWrapper)
 
 	//BEGIN SELF IMPLEMENTED
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
-	_NODISCARD  std::string GetLabel() const;
-	_NODISCARD  bool GetbVisible() const;
+	[[nodiscard]]  std::string GetLabel() const;
+	[[nodiscard]]  bool GetbVisible() const;
 
-	_NODISCARD int GetId() const;
+	[[nodiscard]] int GetId() const;
 
 	/**
 	 * \brief Use EnumWrapper::GetPaintFinishTyp() to interpret this value
 	 * \return A enum value for the WeatherVariant
 	 */
-	_NODISCARD unsigned char GetFinishType() const;
-	_NODISCARD std::vector<LinearColor> GetColors() const;
+	[[nodiscard]] unsigned char GetFinishType() const;
+	[[nodiscard]] std::vector<LinearColor> GetColors() const;
 	//END SELF IMPLEMENTED
 
 private:

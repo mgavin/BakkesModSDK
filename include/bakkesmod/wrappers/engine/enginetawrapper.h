@@ -10,7 +10,7 @@ class BAKKESMOD_PLUGIN_IMPORT EngineTAWrapper : public ObjectWrapper {
 public:
 	CONSTRUCTORS(EngineTAWrapper)
 
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 
 	//AUTO-GENERATED FROM FIELDS

@@ -11,10 +11,10 @@ public:
 	CONSTRUCTORS(OnlineProductWrapper)
 
 	//BEGIN SELF IMPLEMENTED
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 	std::string SeriesIdToSeriesName(int seriesID);
-	_NODISCARD bool IsFavorited() const;
+	[[nodiscard]] bool IsFavorited() const;
 	//END SELF IMPLEMENTED
 
 	//AUTO-GENERATED FROM FIELDS
@@ -35,7 +35,7 @@ public:
 	bool GetIsUntradable();
 	[[deprecated("Missing half the data. Use GetInstanceIDV2")]]
 	unsigned long long GetInstanceID();
-	_NODISCARD ProductInstanceID GetInstanceIDV2();
+	[[nodiscard]] ProductInstanceID GetInstanceIDV2();
 	//END AUTO-GENERATED FROM METHODS
 
 private:

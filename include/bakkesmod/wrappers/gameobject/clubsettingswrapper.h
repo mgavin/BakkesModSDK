@@ -7,7 +7,7 @@ public:
 	CONSTRUCTORS(ClubSettingsWrapper)
 
 	//BEGIN SELF IMPLEMENTED
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 	//END SELF IMPLEMENTED
 

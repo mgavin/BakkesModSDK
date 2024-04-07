@@ -7,12 +7,12 @@ public:
 	CONSTRUCTORS(ProductAssetBodyWrapper)
 
 	//BEGIN SELF IMPLEMENTED
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 	//END SELF IMPLEMENTED
 
-	_NODISCARD ProductEquipProfileWrapper GetEquipProfile() const;
-	_NODISCARD bool CanEquip(const ProductWrapper& product_wrappper) const;
+	[[nodiscard]] ProductEquipProfileWrapper GetEquipProfile() const;
+	[[nodiscard]] bool CanEquip(const ProductWrapper& product_wrappper) const;
 
 private:
 	PIMPL

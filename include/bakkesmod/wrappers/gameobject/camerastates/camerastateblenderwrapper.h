@@ -48,13 +48,13 @@ public:
 	CONSTRUCTORS(CameraStateBlenderWrapper)
 
 	//BEGIN SELF IMPLEMENTED
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 	//END SELF IMPLEMENTED
 
-	_NODISCARD CameraStateXWrapper GetCameraState() const;
-	_NODISCARD CameraTransition GetTransition() const;
-	_NODISCARD void SetTransition(const CameraTransition& transition) const;
+	[[nodiscard]] CameraStateXWrapper GetCameraState() const;
+	[[nodiscard]] CameraTransition GetTransition() const;
+	[[nodiscard]] void SetTransition(const CameraTransition& transition) const;
 
 private:
 	PIMPL

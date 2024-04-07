@@ -46,8 +46,8 @@ public:
 	OnlineProductWrapper GetOnlineProduct(unsigned long long instanceID);
 	OnlineProductWrapper GetOnlineProduct(const ProductInstanceID& product_instance_id) const;
 
-	_NODISCARD static bool IsOnlineID(const ProductInstanceID& product_instance_id);
-	_NODISCARD static int GetProductIdFromInstanceId(const ProductInstanceID& product_instance_id);
+	[[nodiscard]] static bool IsOnlineID(const ProductInstanceID& product_instance_id);
+	[[nodiscard]] static int GetProductIdFromInstanceId(const ProductInstanceID& product_instance_id);
 
 	[[deprecated("This will 99% for sure crash")]]
 	ArrayWrapper<OnlineProductWrapper> GetUnlockedProducts();
@@ -64,7 +64,7 @@ public:
 
 	TradeWrapper GetTradeWrapper();
 	ProductTradeInWrapper GetProductTradeInWrapper();
-	_NODISCARD GfxProductsWrapper GetGfxProductsWrapper();
+	[[nodiscard]] GfxProductsWrapper GetGfxProductsWrapper();
 
 private:
 	PIMPL

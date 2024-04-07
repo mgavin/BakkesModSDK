@@ -23,7 +23,7 @@ public:
 
 
 
-	_NODISCARD bool GetForceDefaultColors() const;
+	[[nodiscard]] bool GetForceDefaultColors() const;
 	void SetForceDefaultColors(bool value);
 	
 };

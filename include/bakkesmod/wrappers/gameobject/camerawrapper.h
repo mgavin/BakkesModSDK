@@ -32,7 +32,7 @@ public:
 	std::string GetFocusActor();
 	bool SetFocusActor(std::string actorName);
     bool SetFlyCamBallTargetMode();
-	_NODISCARD CameraStateBlenderWrapper GetBlender() const;
+	[[nodiscard]] CameraStateBlenderWrapper GetBlender() const;
 
 	//AUTO-GENERATED FROM FIELDS
 	float GetSwivelFastSpeed();

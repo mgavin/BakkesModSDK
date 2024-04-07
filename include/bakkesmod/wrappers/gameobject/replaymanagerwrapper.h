@@ -6,13 +6,13 @@ public:
 	CONSTRUCTORS(ReplayManagerWrapper)
 
 	//BEGIN SELF IMPLEMENTED
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 	//END SELF IMPLEMENTED
 
-	_NODISCARD bool LoadReplaysFromDemoFolder() const;
-	_NODISCARD std::vector<ReplaySoccarWrapper> GetLoadedReplays() const;
-	_NODISCARD bool IsLoadingReplayHeaders() const;
+	[[nodiscard]] bool LoadReplaysFromDemoFolder() const;
+	[[nodiscard]] std::vector<ReplaySoccarWrapper> GetLoadedReplays() const;
+	[[nodiscard]] bool IsLoadingReplayHeaders() const;
 
 
 	/**

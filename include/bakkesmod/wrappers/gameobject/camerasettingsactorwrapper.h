@@ -6,13 +6,13 @@ public:
 	CONSTRUCTORS(CameraSettingsActorWrapper)
 
 	//BEGIN SELF IMPLEMENTED
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 	//END SELF IMPLEMENTED
 
-	_NODISCARD PriWrapper GetPri() const;
-	_NODISCARD ProfileCameraSettings GetProfileSettings() const;
-	_NODISCARD void SetProfileSettings(const ProfileCameraSettings& profileCameraSettings);
+	[[nodiscard]] PriWrapper GetPri() const;
+	[[nodiscard]] ProfileCameraSettings GetProfileSettings() const;
+	[[nodiscard]] void SetProfileSettings(const ProfileCameraSettings& profileCameraSettings);
 
 private:
 	PIMPL

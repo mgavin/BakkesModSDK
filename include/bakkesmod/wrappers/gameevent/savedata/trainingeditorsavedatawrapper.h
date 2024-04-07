@@ -9,7 +9,7 @@ class BAKKESMOD_PLUGIN_IMPORT TrainingEditorSaveDataWrapper : public ObjectWrapp
 public:
 	CONSTRUCTORS(TrainingEditorSaveDataWrapper)
 
-	_NODISCARD bool IsNull() const;
+	[[nodiscard]] bool IsNull() const;
 	explicit operator bool() const;
 
 	//AUTO-GENERATED FROM FIELDS
