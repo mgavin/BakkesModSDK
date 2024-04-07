@@ -1,6 +1,6 @@
 #pragma once
-#include "bakkesmod/wrappers/CVarManagerWrapper.h"
-#include "bakkesmod/wrappers/GameWrapper.h"
+#include "bakkesmod/wrappers/cvarmanagerwrapper.h"
+#include "bakkesmod/wrappers/gamewrapper.h"
 #include "bakkesmodsdk.h"
 #include <memory>
 //#include <windows.h>

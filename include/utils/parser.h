@@ -711,8 +711,8 @@ public:
 };
 
 
-#include <stdarg.h>  // For va_start, etc.
-#include <memory>    // For std::unique_ptr
+#include <stdarg.h>  // for va_start, etc.
+#include <memory>    // for std::unique_ptr
 //Source: https://stackoverflow.com/questions/2342162/stdstring-formatting-like-sprintf
 static inline std::string string_format(const std::string fmt_str, ...) {
 	int final_n, n = ((int)fmt_str.size()) * 2; /* Reserve two times as much as the length of the fmt_str */

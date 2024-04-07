@@ -1,5 +1,5 @@
 #pragma once
-#include "./GameEvent/ServerWrapper.h"
+#include "./gameevent/serverwrapper.h"
 class BAKKESMOD_PLUGIN_IMPORT ReplayWrapper : public ServerWrapper
 {
 public:

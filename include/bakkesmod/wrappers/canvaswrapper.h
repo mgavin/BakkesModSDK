@@ -1,7 +1,7 @@
 #pragma once
-#include "WrapperStructs.h"
-#include "./Engine/ActorWrapper.h"
-#include "ImageWrapper.h"
+#include "wrapperstructs.h"
+#include "./engine/actorwrapper.h"
+#include "imagewrapper.h"
 
 
 class BAKKESMOD_PLUGIN_IMPORT CanvasWrapper

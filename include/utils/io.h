@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <string>
 #include <vector>
-#include <Windows.h>
+#include <windows.h>
 
 static inline bool file_exists(const std::string& name) {
 	struct stat buffer;
