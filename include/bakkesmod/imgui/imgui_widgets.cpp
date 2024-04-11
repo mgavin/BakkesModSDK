@@ -2326,6 +2326,14 @@ float ImGui::SliderCalcRatioFromValueT(ImGuiDataType data_type, TYPE v, TYPE v_m
     return (float)((FLOATTYPE)(v_clamped - v_min) / (FLOATTYPE)(v_max - v_min));
 }
 
+template IMGUI_API float ImGui::SliderCalcRatioFromValueT<float, float>(ImGuiDataType data_type, float v, float v_min, float v_max, float power, float linear_zero_pos);
+template IMGUI_API float ImGui::SliderCalcRatioFromValueT<int, float>(ImGuiDataType data_type, int v, int v_min, int v_max, float power, float linear_zero_pos);
+template IMGUI_API float ImGui::SliderCalcRatioFromValueT<unsigned int, float>(ImGuiDataType data_type, unsigned int v, unsigned int v_min, unsigned int v_max, float power, float linear_zero_pos);
+template IMGUI_API float ImGui::SliderCalcRatioFromValueT<__int64, double>(ImGuiDataType data_type, __int64 v, __int64 v_min, __int64 v_max, float power, float linear_zero_pos);
+template IMGUI_API float ImGui::SliderCalcRatioFromValueT<unsigned __int64, double>(ImGuiDataType data_type, unsigned __int64 v, unsigned __int64 v_min, unsigned __int64 v_max, float power, float linear_zero_pos);
+template IMGUI_API float ImGui::SliderCalcRatioFromValueT<double, double>(ImGuiDataType data_type, double v, double v_min, double v_max, float power, float linear_zero_pos);
+
+
 // FIXME: Move some of the code into SliderBehavior(). Current responsability is larger than what the equivalent DragBehaviorT<> does, we also do some rendering, etc.
 template<typename TYPE, typename SIGNEDTYPE, typename FLOATTYPE>
 bool ImGui::SliderBehaviorT(const ImRect& bb, ImGuiID id, ImGuiDataType data_type, TYPE* v, const TYPE v_min, const TYPE v_max, const char* format, float power, ImGuiSliderFlags flags, ImRect* out_grab_bb)
