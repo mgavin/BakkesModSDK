@@ -35,7 +35,7 @@ struct CameraTransition
 	explicit CameraTransition(const FCameraTransition&);
 	explicit operator FCameraTransition() const;
 
-	void* camera_state; //CameraStateWrapperX                                      	
+	void* camera_state; //CameraStateWrapperX
 	ViewTargetTransitionParams blend_params;
 	float remaining_time;
 	CameraOrientation snapshot_pov;
@@ -54,7 +54,7 @@ public:
 
 	[[nodiscard]] CameraStateXWrapper GetCameraState() const;
 	[[nodiscard]] CameraTransition GetTransition() const;
-	[[nodiscard]] void SetTransition(const CameraTransition& transition) const;
+	void SetTransition(const CameraTransition& transition) const;
 
 private:
 	PIMPL

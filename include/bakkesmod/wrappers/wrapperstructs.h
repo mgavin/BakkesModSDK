@@ -164,11 +164,11 @@ struct Vector {
     {
         Vector a = v1.clone();
         Vector b = v2.clone();
-        
+
         float dot = Vector::dot(a, b);
-        
+
         float theta = acosf(dot) * t;
-        
+
         Vector relVector = b - (a * dot);
         relVector.normalize();
         float cosTheta = cosf(theta);
@@ -265,7 +265,7 @@ static inline int fixRotator(int newRotation) {// F THIS FOR NOW
     ////    newRotation -= 65535;
     ////    //newRotation = -32767 + (newRotation - 32767);
     ////}
-    ////else if (newRotation <= -32767) { //-35000 
+    ////else if (newRotation <= -32767) { //-35000
     ////    newRotation += 65535;
     ////    //newRotation = 32767 + (newRotation + 32767);
     ////}
@@ -281,7 +281,7 @@ static inline int fixPitch(int newRotation) {// F THIS FOR NOW
     ////    newRotation -= 32767;
     ////    //newRotation = -16383 + (newRotation - 16383);
     ////}
-    ////else if (newRotation <= -16383) { //-35000 
+    ////else if (newRotation <= -16383) { //-35000
     ////    newRotation += 32767;
     ////    //newRotation = 16383 + (newRotation + 16383);
     ////}
@@ -328,7 +328,7 @@ static inline Vector RotatorToVector(const Rotator R)
     vec.X = cosf(fYaw) * CosPitch;
     vec.Y = sinf(fYaw) * CosPitch;
     vec.Z = sinf(fPitch);
-    
+
     return vec;
 }
 
@@ -339,7 +339,7 @@ struct Quat;
 inline Quat operator*(const Quat q1, const Quat q2);
 
 struct Quat {
-    float X, Y, Z, W;
+				float W, X, Y, Z;
 
     Quat(float w, float x, float y, float z) : W(w), X(x), Y(y), Z(z) {}
     Quat() : Quat(1.0, 0.0, 0.0, 0.0) {}
@@ -447,7 +447,7 @@ static inline Quat QuatSlerp(const Quat q1, const Quat q2, float percent)
     q.X = (q1.X * ratioA + q2.X * ratioB);
     q.Y = (q1.Y * ratioA + q2.Y * ratioB);
     q.Z = (q1.Z * ratioA + q2.Z * ratioB);
-    
+
     return q;
 }
 
@@ -472,7 +472,7 @@ static inline Quat RotatorToQuat(const Rotator rot)
     float cosYaw   = cosf(rot.Yaw   * rotatorToRadian);
     float sinRoll  = sinf(rot.Roll  * rotatorToRadian);
     float cosRoll  = cosf(rot.Roll  * rotatorToRadian);
-    
+
     Quat convertedQuat;
     convertedQuat.X = (cosRoll  * sinPitch * sinYaw) - (sinRoll * cosPitch * cosYaw);
     convertedQuat.Y = (-cosRoll * sinPitch * cosYaw) - (sinRoll * cosPitch * sinYaw);
@@ -518,8 +518,8 @@ static inline Rotator QuatToRotator(const Quat q)
 
     float roll_cos = Vector::dot(hor_right, right);
     float roll_f = acosf(roll_cos);
-    float up_f = asinf(up.Z);
-    
+    [[maybe_unused]] float up_f = asinf(up.Z);
+
     if (right.Z >= 0)
     {
         if (up.Z >= 0)
@@ -915,8 +915,8 @@ struct POV {
 struct ViewTarget {
     void* Target;      // ActorWrapper(Target)
     void* Controller;  // PlayerControllerWrapper(Controller)
-    struct POV POV;    // 
-    float AspectRatio; // 
+    struct POV POV;    //
+    float AspectRatio; //
     void* PRI;         // PRIWrapper(PRI)
 };
 
@@ -1053,13 +1053,13 @@ struct BAKKESMOD_PLUGIN_IMPORT GUIDWrapper
 
     bool IsValid() const;
 	std::string ToString(EGuidFormats format = EGuidFormats::UniqueObjectGuid) const;
-	
+
 };
 
 
 
 struct TrainingRoundProgress {
-    int RoundNumber; 
+    int RoundNumber;
     unsigned char Status; //See: EnumWrapper::GetTrainingRoundAttempts
     unsigned char Padding[0x3];
 };

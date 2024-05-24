@@ -1,6 +1,7 @@
 #pragma once
 #include "../../engine/objectwrapper.h"
-#include "productpaintwrapper.h"
+#include "../productpaintwrapper.h"
+#include "bakkesmod/wrappers/arraywrapper.h"
 
 class BAKKESMOD_PLUGIN_IMPORT PaintDatabaseWrapper : public ObjectWrapper {
 public:
